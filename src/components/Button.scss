@@ -1,0 +1,59 @@
+@import '../styles/variables.css';
+
+.btn {
+    background-color: var(--dark-slate);
+    color: var(--white);
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    background-color: var(--light-navy);
+    border: solid 1px var(--green);
+    border-radius: var(--border-radius);
+    color: var(--green);
+    padding: var(--spacing-m);
+    min-width: 200px;
+    transition: var(--transition);
+    margin-top: var(--spacing-l);
+
+    &:hover {
+        background-color: var(--green-tint);
+    }
+
+    &.btn--default {
+    }
+
+    &.btn--round {
+        border-radius: 50%;
+    }
+
+    &.btn--scroll-top {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--light-navy);
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        padding: 0px;
+        min-width: auto;
+        transition: var(--transition);
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            margin-top: 6px;
+            border: solid var(--green);
+            border-width: 0 3px 3px 0;
+            padding: 3px;
+            transform: rotate(-135deg);
+        }
+    }
+}
